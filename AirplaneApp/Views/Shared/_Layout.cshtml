@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+
+    <div id="banner">
+        <div id="banner-images">
+            <img style="object-fit:contain;" src="https://www.azal.az/media/2022/04/27/about_01.jpg" alt="" />
+
+        </div>
+        <h1>The world at a glance!</h1> <br />
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #banner {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+            #banner #banner-images {
+                height: 100%;
+                position: relative;
+                object-fit: cover;
+                z-index: -10;
+                filter: brightness(0.7) grayscale(0.6);
+                animation: banner-change 15s infinite ease-in-out;
+                display: flex;
+                flex-direction: row;
+            }
+
+                #banner #banner-images img {
+                    width: 100vw;
+                    object-fit: cover;
+                }
+
+            #banner h1 {
+                position: absolute;
+                font-family: sans-serif;
+                font-size: 40px;
+                letter-spacing: 8px;
+                color: rgb(230,255,255);
+                text-shadow: 2px 2px 8px rgb(206, 206, 206);
+                animation: color-cycle 5s infinite ease-in-out;
+                color: rgb(233, 233, 233);
+                text-transform: uppercase;
+                margin-top: -14px;
+                text-align: center;
+                width: 90%;
+            }
+    </style>
+    <section>
+        <style>
+/*            section {
+                background-image: url(https://media.istockphoto.com/id/1042576148/photo/sunset-sky-over-clouds-landscape-travel-serene-tranquil-view-flying-beautiful-natural-colors.jpg?s=612x612&w=0&k=20&c=g2V9eZYN50u6eHOUv2PfDWeN4M7b3biTV3lxjEZ_C6U=);
+                background-size: cover;
+                background-position: center;
+            }*/
+        </style>
+        <div class="container">
+            <div class="row">
+
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </section>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <footer class="hero">
+        <div class="container flex">
+            <div class="container__about">
+                <h2>About</h2>
+                <p>
+                    Azerbaijan Airlines CJSC (AZAL) is a key infrastructure of Azerbaijan's civil aviation and a full member of the international aviation community.
+                </p>
+            </div>
+            <div class="container-pages flex">
+
+                <div class="container__recentpages">
+                    <h2>Recient Pages</h2>
+                    <ul>
+                        <li><a href="https://brayancountries.netlify.app">Countries</a></li>
+                        <li><a href="https://localhost:7272/collection/items">Collection</a></li>
+                        <li><a href="https://localhost:7272/cotegory/item">Cotegory</a></li>
+                        <li><a href="https://localhost:7272/">Home</a></li>
+                    </ul>
+                </div>
+                <div class="container__more">
+                    <h2>Recient Pages</h2>
+                    <ul>
+                        <li><a href="https://challenge2-bom.netlify.app/">Challenge2</a></li>
+                        <li><a href="https://challenge3-brayanom.netlify.app/">Challenge3</a></li>
+                        <li><a href="https://dev4-brayanom.netlify.app/">Challenge4</a></li>
+                        <li><a href="https://cv-brayanom.netlify.app/">Curriculum</a></li>
+                        <li><a href="https://mentor1-brayanom.netlify.app/">Mentor1</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="line__separete"></div>
+        <div class="by flex">
+            <p>Copyright © 2022 All Rights Reserved by Brayan Ospina.</p>
+            <div class="icons">
+                <a href="https://t.co/VBNNTjtw3F" class="icon1 icon--instagram">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="#" class="icon1 icon--twitter">
+                    <i class="ri-twitter-line"></i>
+                </a>
+                <a href="linkedin.com/in/brayan-ospina-8bb472243" class="icon1 icon--linkedin">
+                    <i class="ri-linkedin-line"></i>
+                </a>
+                <a href="https://github.com/brayanospina2005/final-project" class="icon1 icon--github">
+                    <i class="ri-github-line"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+    <style>
+      
+*{
+  padding:0%;
+  margin:0%;
+  box-sizing: border-box;
+}
+
+        .hero {
+            height: auto;
+            background: url("https://www.azal.az/assets/img/planeBg.png") left bottom no-repeat;
+         
+            background-color: rgba(0, 0, 0, 0.747);
+            background-size: contain;
+            background-blend-mode: multiply;
+            /* background-attachment:fixed ;
+    activate when you put in your website (optional)
+  */
+            color: rgb(255, 255, 255);
+            padding: 30px 80px 30px 30px;
+        }
+.hero .container{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.flex{
+  display: flex;
+}
+.container__about{
+  margin-bottom: 30px;
+}
+
+.container__about p{
+  margin-top: 10px;
+  max-width: 300px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.container-pages{
+  column-gap: 30px;
+}
+
+.container-pages ul{
+  padding-top: 10px;
+  list-style: none;
+  line-height: 24px;
+}
+.container-pages ul a{
+  color: inherit;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+.container-pages ul a:hover{
+  color: #017143;
+}
+footer .by{
+margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .by p{
+  color: rgba(255, 255, 255, 0.605);
+  font-size: 14px;
+}
+.line__separete{
+  margin-top: 30px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  z-index: 999;
+}
+.icons {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 25px;
+
+}
+
+.icon1 {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property:
+      outline-offset, outline-color,
+      background-color;
+  transition-duration: .25s;
+}
+
+.icon1:hover {
+  outline-offset: 4px;
+}
+
+.icon1:hover i {
+  animation: shake .25s;
+}
+
+.icon--instagram:hover {
+  background-image: radial-gradient(circle at 30% 107%,
+          #fdf497 0%, #fdf497 5%,
+          #fd5949 45%, #d6249f 60%,
+          #285AEB 90%);
+  outline-color: #a02d76;
+}
+
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+
+.icon--github:hover {
+  background-color: #000000;
+  outline-color: #000000;
+}
+
+
+
+
+    </style>
+</body>
+</html>
+

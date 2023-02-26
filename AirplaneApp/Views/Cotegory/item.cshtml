@@ -1,0 +1,16 @@
+﻿
+@using AirplaneApp.Models
+@model List<Cotergory>
+
+
+<ul style="margin: 0 auto; display: block; width: max-content; padding-bottom:40px;">
+    <span style="color:red; font-size:23px;">Cotegories:</span>
+    @foreach (var items in Model)
+    {
+        <li style=" display:inline-block; list-style-type:none; text-align:center; margin-left:20px;">
+            <span style="color:black; font-size:20px;"> @items.Id</span>.
+            <span style="color: blue; font-size: 20px;">@items.Name</span>
+        </li>
+    }
+</ul>
+
